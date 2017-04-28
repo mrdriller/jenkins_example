@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'cmake .'
+        git 'https://github.com/mrdriller/jenkins_example.git'
+        sh 'CMake .'
+        sh 'make'
       }
     }
   }
